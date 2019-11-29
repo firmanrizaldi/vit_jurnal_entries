@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+    <record id="view_move_form" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            
+            <field name="arch" type="xml">
+                
+                    <header position="inside">
+                        <button name="action_open" states="draft" string="Confirm" type="object" class="oe_highlight" groups="account.group_account_invoice"/>
+                    </header>
+
+                    <button name="action_post" position="replace">
+                        <button name="action_post" states="open" string="Post" type="object" class="oe_highlight" groups="account.group_account_invoice"/>
+                    </button>
+                    
+               
+            </field>
+        </record>
+  </data>
+</odoo>
